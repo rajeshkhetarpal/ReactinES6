@@ -3,6 +3,13 @@
 
 let str ="aacacdcsjkscv";
 
+
+for (let char of str){
+    char
+}
+
+
+
 let arr = str.split('')
 arr
 arr = arr.sort()
