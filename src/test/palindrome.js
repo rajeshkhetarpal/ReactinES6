@@ -1,14 +1,8 @@
 // string in reverse order is same e.g. "abba" is palindrome 
 
-let str = "abba";
-var str1 ="abba"
-
- let res = 1 == "1"
- res
-
 const isPalindrome = (str)=>{
-    return str;
+    return str === str.split('').reverse().join('');
 }
 
-let result = isPalindrome(str);
+let result = isPalindrome("abba");
 result

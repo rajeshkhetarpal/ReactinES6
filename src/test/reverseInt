@@ -1,0 +1,10 @@
+const reverseint=(num)=>{
+    return num.toString().split('').reverse();
+}
+
+
+let res = reverseint(-15)
+res
+
+
+
