@@ -3,11 +3,39 @@
 
 let str ="aacacdcsjkscv";
 
+let charMap = {};
 
 for (let char of str){
-    char
+    charMap[char] = charMap[char] + 1 || 1
+}
+charMap
+
+var res = Object.keys(charMap).reduce((p,c)=>{
+    return charMap[c] > p.max ? {maxChar:c, max:charMap[c]} : p
+},{maxChar:'',max:0})
+
+res
+
+let max = 0 
+let maxChar = ''
+
+for (let [k,v] of Object.keys(charMap)){
+    maxChar = charMap[k] > max ? k: maxChar;
+    max = charMap[k] > max ?  charMap[k] : max
 }
 
+for (let char in charMap){
+    if(charMap[char]>max){
+        max = charMap[char];
+        maxChar = char;
+    }
+}
+maxChar
+max
+
+
+
+charMap
 
 
 let arr = str.split('')
